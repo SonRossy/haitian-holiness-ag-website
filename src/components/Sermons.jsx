@@ -4,11 +4,11 @@ export default function Sermons() {
   const sermons = [
     {
       title: "Hope & Healing",
-      src: "https://www.youtube.com/embed/ysz5S6PUM-U",
+      src: "https://www.youtube.com/embed/fmhg1KgPffg",
     },
     {
       title: "Walking in Faith",
-      src: "https://www.youtube.com/embed/ysz5S6PUM-U",
+      src: "https://www.youtube.com/embed/FQgYGhRcXCw",
     },
   ];
 

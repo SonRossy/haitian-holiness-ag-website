@@ -7,10 +7,14 @@ export default function About() {
         <div>
           <h2 className="text-3xl font-serif text-slate-900">About Us</h2>
           <p className="mt-4 text-slate-700">
-            We are a community of believers dedicated to sharing the love of
-            Christ and transforming lives through worship, fellowship, and
-            service. Our mission is to uplift the Haitian and greater Brockton
-            community spiritually and practically.
+            For the purpose of establishing and maintaining a place of worship
+            for Almighty God, our Heavenly Father; to provide Christian
+            fellowship for those of like precious faith; to honor the Holy Ghost
+            according to our distinctive testimony; to assume our share of the
+            responsibility and privilege of propagating the Gospel of Jesus
+            Christ by all available means, both at home and in foreign lands, we
+            hereby recognize ourselves as a district-affiliated assembly of the
+            Southern New England District of the Assemblies of God, Inc.
           </p>
           <ul className="mt-4 text-slate-700 list-disc list-inside space-y-1">
             <li>Warm worship and vibrant community</li>

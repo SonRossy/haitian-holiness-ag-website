@@ -7,7 +7,6 @@ const NAV_LINKS = [
   "Ministries",
   "Events",
   "Sermons",
-  "Donate",
   "Contact",
 ];
 
@@ -21,7 +20,7 @@ function MobileMenu() {
         {NAV_LINKS.map((link) => (
           <a
             key={link}
-            href={`#${link.toLowerCase()}`}
+            href={`#${link.toLowerCase().replace("home", "#")}`}
             className="block px-4 py-2 hover:bg-slate-50"
           >
             {link}
@@ -41,8 +40,8 @@ export default function Header() {
           {NAV_LINKS.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
-              className="hover:text-sky-900"
+              href={`#${link.toLowerCase().replace("home", "")}`}
+              className="hover:text-sky-900 font-bold"
             >
               {link}
             </a>

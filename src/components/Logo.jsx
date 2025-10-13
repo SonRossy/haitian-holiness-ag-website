@@ -1,9 +1,10 @@
 import React from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 import logo from "../assets/logo.png"; // 👈 place the downloaded logo file here
 
 export default function Logo() {
   return (
-    <div className="flex items-center gap-2">
+    <a href="#" className="flex items-center gap-2">
       <img
         src={logo}
         alt="Haitian Holiness A.G. Logo"
@@ -12,6 +13,6 @@ export default function Logo() {
       <span className="font-heading text-xl font-bold text-brandBlue">
         Haitian Holiness A.G.
       </span>
-    </div>
+    </a>
   );
 }

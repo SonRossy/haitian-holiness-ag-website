@@ -1,6 +1,11 @@
 import React from "react";
+import DonateModal from "./DonateModal";
+import { useState } from "react";
 
 export default function Donate() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [openDonate, setOpenDonate] = useState(false);
+
   return (
     <section id="donate" className="py-12">
       <div className="max-w-4xl mx-auto px-6 md:px-8 bg-gradient-to-r from-slate-50 to-white rounded-xl p-8 shadow-md">
@@ -15,12 +20,16 @@ export default function Donate() {
             </p>
           </div>
           <div>
-            <a
-              href="#"
+            <button
+              onClick={() => setOpenDonate(true)}
               className="inline-block rounded-md px-6 py-3 bg-yellow-400 font-semibold shadow"
             >
               Give Online
-            </a>
+            </button>
+            <DonateModal
+              isOpen={openDonate}
+              onClose={() => setOpenDonate(false)}
+            />
           </div>
         </div>
       </div>

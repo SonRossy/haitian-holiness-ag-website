@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
 import logo from "../assets/logo.png"; // 👈 place the downloaded logo file here
 
 export default function Logo() {

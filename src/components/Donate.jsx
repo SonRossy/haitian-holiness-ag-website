@@ -3,7 +3,6 @@ import DonateModal from "./DonateModal";
 import { useState } from "react";
 
 export default function Donate() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [openDonate, setOpenDonate] = useState(false);
 
   return (

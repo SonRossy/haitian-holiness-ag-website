@@ -1,17 +1,19 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
+const MotionDiv = motion.div;
+
 const JoinModal = ({ isOpen, onClose }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
+        <MotionDiv
           className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <motion.div
+          <MotionDiv
             className="bg-white rounded-2xl shadow-2xl p-8 w-[90%] max-w-lg relative text-center"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -66,8 +68,8 @@ const JoinModal = ({ isOpen, onClose }) => {
               “For where two or three are gathered in my name, there am I with
               them.” – Matthew 18:20
             </p>
-          </motion.div>
-        </motion.div>
+          </MotionDiv>
+        </MotionDiv>
       )}
     </AnimatePresence>
   );

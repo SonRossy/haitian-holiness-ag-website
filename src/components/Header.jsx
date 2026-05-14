@@ -4,8 +4,10 @@ import Logo from "./Logo";
 const NAV_LINKS = [
   "Home",
   "About",
+  "Pastor",
   "Ministries",
   "Events",
+  "Gallery",
   "Sermons",
   "Contact",
 ];

@@ -1,13 +1,20 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import JoinModal from "./JoinModal";
 
-//
 const homeImages = [
-  "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1350&q=60&w=1500",
-  "https://plus.unsplash.com/premium_photo-1677048147315-08e796b48a87?q=80&w=1516&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1555483618-92870e63614e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  {
+    src: "/gallery/hero-congregation.jpg",
+    position: "center top",
+  },
+  {
+    src: "/gallery/womens-ministry.jpg",
+    position: "center 35%",
+  },
+  {
+    src: "/gallery/worship-team.jpg",
+    position: "center 35%",
+  },
 ];
 
 export default function Hero() {
@@ -26,37 +33,45 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[60vh] overflow-hidden">
+    <section id="home" className="relative h-[72vh] min-h-[560px] overflow-hidden">
       <Slider {...settings}>
-        {homeImages.map((src, index) => (
-          <div key={index}>
+        {homeImages.map((image) => (
+          <div key={image.src}>
             <div
-              className="w-full h-[90vh] bg-center bg-cover bg-no-repeat"
+              className="relative h-[72vh] min-h-[560px] w-full bg-cover bg-no-repeat"
               style={{
-                backgroundImage: `url(${src})`,
+                backgroundImage: `url(${image.src})`,
+                backgroundPosition: image.position,
               }}
             >
-              <div className="w-full h-full bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-                  Welcome to Haitian Holiness A.G.
-                </h1>
-                <p className="text-lg md:text-2xl max-w-2xl drop-shadow-md">
-                  A community of faith, love, and worship in Brockton,
-                  Massachusetts.
-                </p>
-                <div className="mt-6 flex gap-3">
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="inline-block rounded-md px-5 py-3 bg-yellow-400 text-slate-900 font-semibold shadow hover:brightness-95"
-                  >
-                    Join Us
-                  </button>
-                  <a
-                    href="#sermons"
-                    className="inline-block rounded-md px-5 py-3 border border-white/40 text-white hover:bg-white/10"
-                  >
-                    Watch Sermon
-                  </a>
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/45 to-slate-950/20" />
+              <div className="relative z-10 mx-auto flex h-full max-w-6xl items-center px-6 md:px-8">
+                <div className="max-w-2xl text-white">
+                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">
+                    Brockton, Massachusetts
+                  </p>
+                  <h1 className="text-4xl font-bold leading-tight drop-shadow-lg md:text-6xl">
+                    Welcome to Haitian Holiness A.G.
+                  </h1>
+                  <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90 drop-shadow-md md:text-2xl">
+                    A community of faith, love, and worship growing together in
+                    Christ.
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setIsModalOpen(true)}
+                      className="rounded-md bg-yellow-400 px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:brightness-95"
+                    >
+                      Join Us
+                    </button>
+                    <a
+                      href="#sermons"
+                      className="rounded-md border border-white/50 px-5 py-3 font-semibold text-white transition hover:bg-white/10"
+                    >
+                      Watch Sermon
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

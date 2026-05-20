@@ -17,14 +17,17 @@ const galleryPhotos = [
   {
     title: "Worship Prayer",
     src: "/gallery/worship-prayer.jpg",
+    position: "center 18%",
   },
   {
     title: "Pastor Speaking",
     src: "/gallery/pastor-speaking.jpg",
+    position: "center 16%",
   },
   {
     title: "Soloist",
     src: "/gallery/soloist.jpg",
+    position: "center 24%",
   },
   {
     title: "Worship Team",
@@ -57,6 +60,7 @@ function PhotoCard({ photo, className = "" }) {
         src={photo.src}
         alt={photo.title}
         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        style={{ objectPosition: photo.position || "center center" }}
         loading={photo.featured ? "eager" : "lazy"}
       />
       <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent p-4 pt-12">

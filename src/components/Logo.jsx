@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png"; // 👈 place the downloaded logo file here
+import logo from "../assets/logo.png";
 
 export default function Logo() {
   return (
@@ -10,7 +10,7 @@ export default function Logo() {
         className="h-16 w-auto"
       />
       <span className="font-heading text-xl font-bold text-brandBlue">
-        Haitian Holiness A.G.
+        Haitian Holiness
       </span>
     </a>
   );

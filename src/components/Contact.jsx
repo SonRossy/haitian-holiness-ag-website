@@ -10,15 +10,21 @@ const contactDetails = [
   },
   {
     title: "Email Us",
-    body: "fmangu460@gmail.com",
-    href: "mailto:fmangu460@gmail.com",
+    body: "holiness.agchurch@gmail.com",
+    href: "mailto:holiness.agchurch@gmail.com",
     icon: Mail,
   },
   {
     title: "Visit Us",
-    body: "214 Ames St, Brockton, MA 02301",
-    href: "https://www.google.com/maps/search/?api=1&query=214+Ames+St+Brockton+MA+02301",
+    body: "21 Saint Casimir Ave, Brockton, MA 02302",
+    href: "https://www.google.com/maps/search/?api=1&query=21+Saint+Casimir+Ave+Brockton+MA+02302",
     icon: MapPin,
+  },
+  {
+    title: "Mail Us",
+    body: "P.O. Box 692, Brockton, MA 02303",
+    href: "mailto:holiness.agchurch@gmail.com",
+    icon: Mail,
   },
 ];
 
@@ -39,7 +45,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {contactDetails.map((item) => (
             <a
               key={item.title}
@@ -74,20 +80,22 @@ export default function Contact() {
             <div className="mt-8 space-y-5">
               <div>
                 <p className="text-sm uppercase tracking-[0.18em] text-slate-400">
-                  Sunday Worship
+                  Sunday School
                 </p>
-                <p className="mt-2 text-2xl font-semibold">10:30 AM</p>
+                <p className="mt-2 text-2xl font-semibold">10:00 - 10:50 AM</p>
               </div>
               <div className="border-t border-white/10 pt-5">
                 <p className="text-sm uppercase tracking-[0.18em] text-slate-400">
-                  Wednesday Service
+                  Service
                 </p>
-                <p className="mt-2 text-2xl font-semibold">7:00 PM</p>
+                <p className="mt-2 text-2xl font-semibold">
+                  11:00 AM - 1:30 PM
+                </p>
               </div>
             </div>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=214+Ames+St+Brockton+MA+02301"
+              href="https://www.google.com/maps/search/?api=1&query=21+Saint+Casimir+Ave+Brockton+MA+02302"
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-brandGold px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-white"
@@ -99,7 +107,7 @@ export default function Contact() {
 
           <iframe
             title="Map to Haitian Holiness A.G."
-            src="https://www.google.com/maps?q=214%20Ames%20St%2C%20Brockton%2C%20MA%2002301&output=embed"
+            src="https://www.google.com/maps?q=21%20Saint%20Casimir%20Ave%2C%20Brockton%2C%20MA%2002302&output=embed"
             className="h-[360px] w-full border-0 lg:h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

@@ -9,6 +9,11 @@ const galleryPhotos = [
     featured: true,
   },
   {
+    title: "Pastor and Family",
+    src: "/gallery/pastor-family.png",
+    position: "center 35%",
+  },
+  {
     title: "Women's Ministry",
     src: "/gallery/womens-ministry.jpg",
   },

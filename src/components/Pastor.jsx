@@ -25,13 +25,12 @@ export default function Pastor() {
             Pastor Frantz
           </h3>
           <p className="mt-5 text-lg leading-8 text-slate-700">
-            Pastor Frantz serves Haitian Holiness A.G. with a heart for worship,
-            prayer, and helping families grow stronger in Christ.
-          </p>
-          <p className="mt-4 leading-7 text-slate-600">
-            Through preaching, pastoral care, and community leadership, he helps
-            guide the church family toward faithfulness, unity, and service in
-            Brockton and beyond.
+            Reverend Frantz MANGURA has served Haitian Holiness Assembly of God
+            for over 14 years as senior Pastor. He has dedicated his time to the
+            study of the Bible, communicating its principles during worship
+            services, leading mentorship programs, and providing spiritual
+            support to individuals and families navigating emotional, marital,
+            and grief-related challenges, as well as personal crises.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">

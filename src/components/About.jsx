@@ -7,14 +7,14 @@ export default function About() {
         <div>
           <h2 className="text-3xl font-serif text-slate-900">About Us</h2>
           <p className="mt-4 text-slate-700">
-            For the purpose of establishing and maintaining a place of worship
-            for Almighty God, our Heavenly Father; to provide Christian
-            fellowship for those of like precious faith; to honor the Holy Ghost
-            according to our distinctive testimony; to assume our share of the
-            responsibility and privilege of propagating the Gospel of Jesus
-            Christ by all available means, both at home and in foreign lands, we
-            hereby recognize ourselves as a district-affiliated assembly of the
-            Southern New England District of the Assemblies of God, Inc.
+            Our perspec ve is to glorify God by establishing and maintaining a
+            place for the worship of Almighty God, our Heavenly Father; to
+            provide for Chris an fellowship for those who have made a profession
+            of faith in and are following Jesus Christ; to assume our share of
+            responsibility for evangelism and the privilege of propaga ng the
+            gospel; to train, and equip fully developed disciples and followers
+            of Jesus Christ, and to serve our community and minister with the
+            love and compassion of Jesus Christ.
           </p>
           <ul className="mt-4 text-slate-700 list-disc list-inside space-y-1">
             <li>Warm worship and vibrant community</li>

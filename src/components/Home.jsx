@@ -4,6 +4,10 @@ import JoinModal from "./JoinModal";
 
 const homeImages = [
   {
+    src: "/gallery/pastor-family.png",
+    position: "center 35%",
+  },
+  {
     src: "/gallery/hero-congregation.jpg",
     position: "center top",
   },

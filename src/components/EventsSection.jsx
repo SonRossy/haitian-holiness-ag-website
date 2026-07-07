@@ -1,27 +1,20 @@
 import React from "react";
-import { CalendarDays, Clock, HeartHandshake, MapPin } from "lucide-react";
+import { BookOpen, Coffee, Clock, MapPin } from "lucide-react";
 
 const events = [
   {
-    title: "Sunday Worship",
+    title: "Sunday School",
     day: "Every Sunday",
-    time: "10:30 AM",
-    description: "Gather with us for worship, prayer, and the Word.",
-    Icon: CalendarDays,
+    time: "10:00 - 10:50 AM",
+    description: "Breakfast is followed by Sunday school class.",
+    Icon: Coffee,
   },
   {
-    title: "Bible Study",
-    day: "Wednesdays",
-    time: "7:00 PM",
-    description: "Grow deeper in Scripture through weekly teaching and fellowship.",
-    Icon: Clock,
-  },
-  {
-    title: "Community Outreach",
-    day: "1st Saturday",
-    time: "Monthly",
-    description: "Serving our neighbors and sharing the love of Christ.",
-    Icon: HeartHandshake,
+    title: "Service",
+    day: "Sunday Morning",
+    time: "11:00 AM - 1:30 PM",
+    description: "Gather with the church family for worship and fellowship.",
+    Icon: BookOpen,
   },
 ];
 
@@ -35,20 +28,20 @@ export default function EventsSection() {
               Worship With Us
             </p>
             <h3 className="mt-2 text-3xl font-serif text-slate-900">
-              Upcoming Events
+              Worship Schedule
             </h3>
             <p className="mt-3 text-slate-600">
-              Join us throughout the week for worship, discipleship, and
-              opportunities to serve together.
+              Join us every Sunday morning for Sunday school, worship, and
+              fellowship.
             </p>
           </div>
           <div className="flex items-center gap-2 text-sm font-medium text-slate-600">
             <MapPin size={18} className="text-yellow-600" />
-            <span>214 Ames St, Brockton, MA</span>
+            <span>21 Saint Casimir Ave, Brockton, MA</span>
           </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
           {events.map(({ title, day, time, description, Icon }) => (
             <article
               key={title}

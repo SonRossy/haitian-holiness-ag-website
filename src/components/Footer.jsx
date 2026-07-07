@@ -64,7 +64,11 @@ export default function Footer() {
                 size={17}
                 aria-hidden="true"
               />
-              <span>214 Ames St, Brockton, MA 02301</span>
+              <span>
+                21 Saint Casimir Ave, Brockton, MA 02302
+                <br />
+                P.O. Box 692, Brockton, MA 02303
+              </span>
             </p>
             <p className="flex items-start gap-3">
               <Clock
@@ -72,7 +76,9 @@ export default function Footer() {
                 size={17}
                 aria-hidden="true"
               />
-              <span>Sunday 10:30 AM | Wednesday 7:00 PM</span>
+              <span>
+                Sunday School 10:00 - 10:50 AM | Service 11:00 AM - 1:30 PM
+              </span>
             </p>
           </div>
         </div>
@@ -94,7 +100,7 @@ export default function Footer() {
               <span>(857) 417-9149</span>
             </a>
             <a
-              href="mailto:fmangu460@gmail.com"
+              href="mailto:holiness.agchurch@gmail.com"
               className="flex items-center gap-3 break-all transition hover:text-white"
             >
               <Mail
@@ -102,7 +108,7 @@ export default function Footer() {
                 size={17}
                 aria-hidden="true"
               />
-              <span>fmangu460@gmail.com</span>
+              <span>holiness.agchurch@gmail.com</span>
             </a>
           </div>
         </div>

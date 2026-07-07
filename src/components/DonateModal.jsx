@@ -45,7 +45,9 @@ const DonateModal = ({ isOpen, onClose }) => {
             <p className="text-gray-700">
               Or send manually to:
               <br />
-              <span className="font-semibold">haitianholinessag@gmail.com</span>
+              <span className="font-semibold">
+                holiness.agchurch@gmail.com
+              </span>
             </p>
 
             <p className="mt-6 text-sm italic text-gray-500">

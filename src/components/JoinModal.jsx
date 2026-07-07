@@ -14,18 +14,18 @@ const MotionDiv = motion.div;
 
 const visitDetails = [
   {
-    title: "Sunday Worship",
-    detail: "10:30 AM",
-    icon: CalendarDays,
-  },
-  {
-    title: "Wednesday Service",
-    detail: "7:00 PM",
+    title: "Sunday School",
+    detail: "Sunday 10:00 - 10:50 AM",
     icon: Clock,
   },
   {
+    title: "Service",
+    detail: "Sunday 11:00 AM - 1:30 PM",
+    icon: CalendarDays,
+  },
+  {
     title: "Church Address",
-    detail: "214 Ames St, Brockton, MA 02301",
+    detail: "21 Saint Casimir Ave, Brockton, MA 02302",
     icon: MapPin,
   },
 ];
@@ -141,14 +141,22 @@ const JoinModal = ({ isOpen, onClose }) => {
                     href="tel:+18574179149"
                     className="flex items-center gap-3 rounded-md bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    <Phone size={18} className="text-brandBlue" aria-hidden="true" />
+                    <Phone
+                      size={18}
+                      className="text-brandBlue"
+                      aria-hidden="true"
+                    />
                     Call (857) 417-9149
                   </a>
                   <a
-                    href="mailto:fmangu460@gmail.com"
+                    href="mailto:holiness.agchurch@gmail.com"
                     className="flex items-center gap-3 rounded-md bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    <Mail size={18} className="text-brandBlue" aria-hidden="true" />
+                    <Mail
+                      size={18}
+                      className="text-brandBlue"
+                      aria-hidden="true"
+                    />
                     Email the church
                   </a>
                 </div>
@@ -156,7 +164,7 @@ const JoinModal = ({ isOpen, onClose }) => {
 
               <div className="mt-6 grid gap-3">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=214+Ames+St+Brockton+MA+02301"
+                  href="https://www.google.com/maps/search/?api=1&query=21+Saint+Casimir+Ave+Brockton+MA+02302"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-between rounded-md bg-brandBlue px-5 py-4 font-semibold text-white transition hover:brightness-110"

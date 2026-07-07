@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haitian Holiness Assembly of God Letterhead</title>
+    <style>
+      :root {
+        --navy: #07315a;
+        --orange: #ef7a13;
+        --ink: #1f2937;
+        --muted: #5f6b7a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f3f4f6;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 24px auto;
+        background: #ffffff;
+        padding: 0.52in 0.78in 0.7in;
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.14);
+      }
+
+      .letterhead {
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        width: 190px;
+        height: auto;
+        margin: 0 auto 12px;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--navy);
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        margin: 6px 0 0;
+        color: var(--orange);
+        font-size: 16px;
+        font-style: italic;
+      }
+
+      .contact {
+        margin: 14px auto 0;
+        max-width: 7in;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.5px;
+        line-height: 1.7;
+      }
+
+      .contact strong {
+        color: var(--navy);
+        font-weight: 700;
+      }
+
+      .divider {
+        width: 100%;
+        height: 2px;
+        margin: 22px 0 42px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--orange),
+          var(--navy),
+          var(--orange),
+          transparent
+        );
+      }
+
+      .meta {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 2;
+      }
+
+      .subject {
+        margin-top: 24px;
+        font-weight: 700;
+      }
+
+      .body-space {
+        min-height: 5.45in;
+      }
+
+      .signature {
+        margin-top: 34px;
+        width: 3.2in;
+        border-top: 1px solid #9ca3af;
+        padding-top: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      .footer {
+        margin-top: 42px;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 12px;
+        text-align: center;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+      }
+
+      @media print {
+        @page {
+          size: letter;
+          margin: 0;
+        }
+
+        body {
+          background: #ffffff;
+        }
+
+        .page {
+          width: auto;
+          min-height: 11in;
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="letterhead">
+        <img
+          class="logo"
+          src="letterhead-logo-hhag.png"
+          alt="Haitian Holiness Assembly of God logo"
+        />
+        <h1>Haitian Holiness Assembly of God</h1>
+        <p class="subtitle">Assemblee de Dieu de Saintete</p>
+        <p class="contact">
+          <strong>Church Address:</strong> 21 Saint Casimir Ave, Brockton, MA
+          02302 &nbsp;|&nbsp; <strong>P.O. Box:</strong> 692, Brockton, MA 02303
+          <br />
+          <strong>Phone:</strong> (857) 417-9149 &nbsp;|&nbsp;
+          <strong>Email:</strong> holiness.agchurch@gmail.com &nbsp;|&nbsp;
+          <strong>Website:</strong> www.haitianholiness.org
+        </p>
+      </header>
+
+      <div class="divider"></div>
+
+      <section class="meta">
+        <p>Date: ________________________________</p>
+        <p>To: __________________________________</p>
+        <p class="subject">Subject: ______________________________</p>
+      </section>
+
+      <section class="body-space"></section>
+
+      <section class="signature">
+        Pastor Frantz<br />
+        Haitian Holiness Assembly of God
+      </section>
+
+      <footer class="footer">
+        Serving Brockton with faith, worship, fellowship, and community.
+      </footer>
+    </main>
+  </body>
+</html>

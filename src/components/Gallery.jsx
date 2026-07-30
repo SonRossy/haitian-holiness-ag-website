@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const galleryPhotos = [
   {
-    title: "Pastoral Fellowship",
+    title: "Men's Ministry",
     src: "/gallery/pastor-greeting.jpg",
     featured: true,
   },
@@ -12,6 +12,7 @@ const galleryPhotos = [
     title: "Pastor and Family",
     src: "/gallery/pastor-family.png",
     position: "center 35%",
+    fit: "contain",
   },
   {
     title: "Women's Ministry",
@@ -58,28 +59,46 @@ const galleryPhotos = [
   },
 ];
 
-function PhotoCard({ photo, className = "" }) {
+function PhotoCard({ photo, onClick, className = "" }) {
   return (
     <figure
       className={`group relative overflow-hidden rounded-lg bg-slate-200 shadow-sm ${className}`}
     >
-      <img
-        src={photo.src}
-        alt={photo.title}
-        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-        style={{ objectPosition: photo.position || "center center" }}
-        loading={photo.featured ? "eager" : "lazy"}
-      />
-      <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent p-4 pt-12">
-        <span className="text-sm font-semibold text-white">{photo.title}</span>
-      </figcaption>
+      <button
+        type="button"
+        onClick={onClick}
+        className="block h-full w-full text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-300"
+        aria-label={`Open gallery at ${photo.title}`}
+      >
+        <img
+          src={photo.src}
+          alt={photo.title}
+          className={`h-full w-full transition duration-500 group-hover:scale-105 ${
+            photo.fit === "contain" ? "object-contain p-2" : "object-cover"
+          }`}
+          style={{ objectPosition: photo.position || "center center" }}
+          loading={photo.featured ? "eager" : "lazy"}
+        />
+        <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent p-4 pt-12">
+          <span className="text-sm font-semibold text-white">
+            {photo.title}
+          </span>
+        </figcaption>
+      </button>
     </figure>
   );
 }
 
-function GalleryModal({ isOpen, onClose }) {
+function GalleryModal({ isOpen, initialSlide, onClose }) {
   const sliderRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(initialSlide);
+
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentSlide(initialSlide);
+      sliderRef.current?.slickGoTo(initialSlide, true);
+    }
+  }, [initialSlide, isOpen]);
 
   if (!isOpen) {
     return null;
@@ -93,6 +112,7 @@ function GalleryModal({ isOpen, onClose }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: false,
+    initialSlide,
     beforeChange: (_oldIndex, newIndex) => setCurrentSlide(newIndex),
   };
 
@@ -160,8 +180,14 @@ function GalleryModal({ isOpen, onClose }) {
 
 export default function Gallery() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
   const featuredPhoto = galleryPhotos[0];
   const previewPhotos = galleryPhotos.slice(1, 5);
+
+  const openGallery = (index) => {
+    setSelectedPhotoIndex(index);
+    setIsGalleryOpen(true);
+  };
 
   return (
     <section id="gallery" className="bg-white py-16">
@@ -176,12 +202,12 @@ export default function Gallery() {
             </h3>
             <p className="mt-3 max-w-2xl text-slate-600">
               A glimpse of worship, fellowship, and community life at Haitian
-              Holiness A.G.
+              Holiness Assembly of God.
             </p>
           </div>
           <button
             type="button"
-            onClick={() => setIsGalleryOpen(true)}
+            onClick={() => openGallery(0)}
             className="w-fit rounded-md bg-yellow-400 px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:brightness-95"
           >
             View Gallery
@@ -191,13 +217,15 @@ export default function Gallery() {
         <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <PhotoCard
             photo={featuredPhoto}
+            onClick={() => openGallery(0)}
             className="aspect-[4/3] lg:aspect-auto lg:min-h-[520px]"
           />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {previewPhotos.map((photo) => (
+            {previewPhotos.map((photo, index) => (
               <PhotoCard
                 key={photo.src}
                 photo={photo}
+                onClick={() => openGallery(index + 1)}
                 className="aspect-[4/3]"
               />
             ))}
@@ -207,6 +235,7 @@ export default function Gallery() {
 
       <GalleryModal
         isOpen={isGalleryOpen}
+        initialSlide={selectedPhotoIndex}
         onClose={() => setIsGalleryOpen(false)}
       />
     </section>

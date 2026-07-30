@@ -9,7 +9,7 @@ export default function Pastor() {
           <div className="absolute -bottom-4 -right-4 h-32 w-32 rounded-full bg-sky-900/10" />
           <div className="relative overflow-hidden rounded-lg shadow-xl">
             <img
-              src="/gallery/pastor-frantz.jpg"
+              src="/gallery/pastor-frantz-front-sanctuary.png"
               alt="Pastor Frantz speaking at Haitian Holiness A.G."
               className="h-full w-full object-cover"
               loading="lazy"
@@ -25,12 +25,12 @@ export default function Pastor() {
             Pastor Frantz
           </h3>
           <p className="mt-5 text-lg leading-8 text-slate-700">
-            Reverend Frantz MANGURA has served Haitian Holiness Assembly of God
-            for over 14 years as senior Pastor. He has dedicated his time to the
-            study of the Bible, communicating its principles during worship
+            Reverend Frantz Mangura has served Haitian Holiness Assembly of God
+            for over 14 years as senior pastor. He has dedicated his time to
+            studying the Bible, communicating its principles during worship
             services, leading mentorship programs, and providing spiritual
             support to individuals and families navigating emotional, marital,
-            and grief-related challenges, as well as personal crises.
+            grief-related, and personal crises.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">

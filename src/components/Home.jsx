@@ -4,10 +4,6 @@ import JoinModal from "./JoinModal";
 
 const homeImages = [
   {
-    src: "/gallery/pastor-family.png",
-    position: "center 35%",
-  },
-  {
     src: "/gallery/hero-congregation.jpg",
     position: "center top",
   },
@@ -16,8 +12,12 @@ const homeImages = [
     position: "center 35%",
   },
   {
-    src: "/gallery/worship-team.jpg",
-    position: "center 35%",
+    src: "/gallery/congregation-wide.jpg",
+    position: "center top",
+  },
+  {
+    src: "/gallery/pastor-greeting.jpg",
+    position: "center top",
   },
 ];
 
@@ -37,7 +37,10 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-[72vh] min-h-[560px] overflow-hidden">
+    <section
+      id="home"
+      className="relative h-[72vh] min-h-[560px] overflow-hidden"
+    >
       <Slider {...settings}>
         {homeImages.map((image) => (
           <div key={image.src}>
@@ -55,7 +58,7 @@ export default function Hero() {
                     Brockton, Massachusetts
                   </p>
                   <h1 className="text-4xl font-bold leading-tight drop-shadow-lg md:text-6xl">
-                    Welcome to Haitian Holiness A.G.
+                    Welcome to Haitian Holiness Assembly of God
                   </h1>
                   <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90 drop-shadow-md md:text-2xl">
                     A community of faith, love, and worship growing together in
